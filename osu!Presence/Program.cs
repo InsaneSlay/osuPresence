@@ -2,14 +2,10 @@
 using DiscordRPC.Logging;
 using OppaiSharp;
 using OsuMemoryDataProvider;
-using OsuRTDataProvider;
-using OsuRTDataProvider.Listen;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,27 +19,17 @@ namespace osu_Presence
         public static PPv2 ppCount;
         static async Task Main(string[] args)
         {
+            Console.Title = "osu!Presence";
 
             memoryReader = new OsuMemoryReader();
-
-
             client = new DiscordRpcClient("887247757046325248");
             client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
-            client.OnReady += (sender, e) =>
-            {
-                //Console.WriteLine("Received Ready from user {0}", e.User.Username);
-            };
-            client.OnPresenceUpdate += (sender, e) =>
-            {
-                //Console.WriteLine("Received Update! {0}", e.Presence);
-            };
             client.Initialize();
-
             UpdatePresence();
             while (true)
             {
                 UpdatePresence();
-                Thread.Sleep(500);
+                Thread.Sleep(500); //to avoid discord rate limiting
             }
         }
 
@@ -52,7 +38,6 @@ namespace osu_Presence
             int status;
             memoryReader.GetCurrentStatus(out status);
 
-            Console.WriteLine(status); 
             byte[] data = new WebClient().DownloadData("https://osu.ppy.sh/osu/" + memoryReader.GetMapId());
             var stream = new MemoryStream(data, false);
             var reader = new StreamReader(stream);
