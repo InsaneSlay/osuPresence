@@ -51,6 +51,8 @@ osu!Presence requires some libraries to function. The names and respected owners
  * [ProcessMemoryDataFinder by Piotrekol](https://github.com/Piotrekol/ProcessMemoryDataFinder/tree/master/ProcessMemoryDataFinder)
  * [OppaiSharp by HoLLy-HaCKeR](https://github.com/HoLLy-HaCKeR/OppaiSharp)
 
-# Takedown
+# Contact
 If peppy or anyone over at the osu! team does not like this program, you may contact me for takedown at
  > fnbrleaks@gmail.com
+
+If there is an issue with this program and you need to notify me, DO NOT CONTACT ME THIS WAY. Open a new issue [here](https://github.com/InsaneSlay/osuPresence/issues) and I will get to it.
