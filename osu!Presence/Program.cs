@@ -9,7 +9,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
-
+using static OppaiSharp.Helpers;
 namespace osu_Presence
 {
     class Program
@@ -43,7 +43,7 @@ namespace osu_Presence
             var reader = new StreamReader(stream);
             var beatmap = Beatmap.Read(reader);
             Mods mods = (Mods)memoryReader.GetMods();
-            string Smods = ModsToString(mods.ToString());
+            string Smods = "+" + ModsToString(mods);
             var diff = new DiffCalc().Calc(beatmap, mods);
             switch (status)
             {
@@ -181,58 +181,7 @@ namespace osu_Presence
                 }
             });
         }
-
-        public static string ModsToString(string mods)
-        {
-            string re = "+";
-            foreach(var item in mods.Split(','))
-            {
-                string nMod = item.Replace(" ", "");
-                switch (nMod)
-                {
-                    case "NoMod":
-                        re = "";
-                        break;
-                    case "NoFail":
-                        re += "NF";
-                        break;
-                    case "Easy":
-                        re += "EZ";
-                        break;
-                    case "TouchDevice":
-                        re += "TD";
-                        break;
-                    case "Hidden":
-                        re += "HD";
-                        break;
-                    case "Nightcore":
-                        re += "NC";
-                        break;
-                    case "DoubleTime":
-                        re += "DT";                 
-                        break;
-                    case "Hardrock":
-                        re += "HR";
-                        break;
-                    case "HalfTime":
-                        re += "HT";
-                        break;
-                    case "SpeedChanging":
-                        break;
-                    case "MapChanging":
-                        break;
-                    case "Flashlight":
-                        re += "FL";
-                        break;
-                    case "SpunOut":
-                        re += "SO";
-                        break;
-                }
-            }
-            if (re.Contains("NC"))
-                re = re.Replace("DT", "");
-            return re;
-        }
+        
         public static string getGameMode(int val)
         {
             switch (val)
