@@ -49,7 +49,7 @@ osu!Presence requires some libraries to function. The names and respected owners
  * [DiscordRichPresence by Lachee](https://github.com/Lachee/discord-rpc-csharp)
  * [OsuMemoryDataProvider by Piotrekol](https://github.com/Piotrekol/ProcessMemoryDataFinder/tree/master/OsuMemoryDataProvider)
  * [ProcessMemoryDataFinder by Piotrekol](https://github.com/Piotrekol/ProcessMemoryDataFinder/tree/master/ProcessMemoryDataFinder)
- * [OppaiSharp by HoLLy-HaCKeR](https://github.com/HoLLy-HaCKeR/OppaiSharp)
+ * [OppaiSharp by HoLLy-HaCKeR (Modified)](https://github.com/HoLLy-HaCKeR/OppaiSharp)
 
 # Contact
 If peppy or anyone over at the osu! team does not like this program, you may contact me for takedown at
