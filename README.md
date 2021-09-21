@@ -7,7 +7,7 @@ A more detailed Discord Rich Presence integration for osu!
 osu!Presence can display almost every possible game state in osu! This works by reading patterns and retrieving data via. memory. This is **NOT** a cheat and does not put you at risk of getting banned.
 
 ## Installation
-Make sure to go the "Integration" options in the "Online" tab in osu! and **disable** "Discord Rich Presence" in order to not overrite the data from this program. As well as go to Discord > Settings > Activity Status and Enable it. As of now, I have **NOT** Implemented a way to patch your game so this runs on launch, in the meantime, you can download the executable over in the [Released Binaries](https://github.com/InsaneSlay/osuPresence/releases) (May return a false positive due to it reading your osu! config file for your username. After, just open osu!Presence.exe while or before opening osu!. A game patch will be released soon in order to avoid going through the extra hassle.
+Make sure to go the "Integration" options in the "Online" tab in osu! and **disable** "Discord Rich Presence" in order to not overrite the data from this program. As well as go to Discord > Settings > Activity Status and Enable it. As of now, I have **NOT** Implemented a way to patch your game so this runs on launch, in the meantime, you can download the executable over in the [Released Binaries](https://github.com/InsaneSlay/osuPresence/releases) (May return a false positive due to it reading your osu! config file for your username). After, just open osu!Presence.exe while or before opening osu!. A game patch will be released soon in order to avoid going through the extra hassle.
 
 ## Game States
   * Main Menu
